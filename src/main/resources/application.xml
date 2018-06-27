@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--Create bean using constructor (for object types)-->
+    <bean id="t1000const" class="com.spring.xml.conf.robots.ModelT1000const">
+        <constructor-arg ref="sonyHead"/>
+        <constructor-arg ref="toshibaHand"/>
+        <constructor-arg ref="sonyLeg"/>
+    </bean>
+
+    <!--Create bean using setters (for object types)-->
+    <bean id="t1000getset" class="com.spring.xml.conf.robots.ModelT1000getset">
+        <property name="head" ref="toshibaHead"/>
+        <property name="hand" ref="sonyHand"/>
+        <property name="leg" ref="sonyLeg"/>
+    </bean>
+
+
+
+    <!--Create bean using constructor (for primitive types) -->
+    <bean id="t1000" class="com.spring.xml.conf.robots.ModelT1000">
+        <constructor-arg value="red" index="0" type="java.lang.String"/>
+        <constructor-arg value="1988" index="1" type="int"/>
+        <constructor-arg value="true" index="2" type="boolean"/>
+    </bean>
+
+
+    <bean id="sonyHand" class="com.spring.xml.conf.service.impl.SonyHand"/>
+    <bean id="sonyHead" class="com.spring.xml.conf.service.impl.SonyHead"/>
+    <bean id="sonyLeg" class="com.spring.xml.conf.service.impl.SonyLeg"/>
+
+
+    <bean id="toshibaHand" class="com.spring.xml.conf.service.impl.ToshibaHand"/>
+    <bean id="toshibaHead" class="com.spring.xml.conf.service.impl.ToshibaHead"/>
+    <bean id="toshibaLeg" class="com.spring.xml.conf.service.impl.ToshibaLeg"/>
+
+
+</beans>

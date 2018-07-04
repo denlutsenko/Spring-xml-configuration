@@ -4,6 +4,9 @@ import com.spring.xml.conf.service.interf.IHand;
 import com.spring.xml.conf.service.interf.IHead;
 import com.spring.xml.conf.service.interf.ILeg;
 import com.spring.xml.conf.service.interf.IRobot;
+import org.springframework.core.annotation.AliasFor;
+
+
 
 public class ModelT1000 implements IRobot {
 

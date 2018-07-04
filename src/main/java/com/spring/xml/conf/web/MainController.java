@@ -7,6 +7,7 @@ import com.spring.xml.conf.robots.ModelT1000getset;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
 public class MainController {
     public static void main(String[] args) {
 

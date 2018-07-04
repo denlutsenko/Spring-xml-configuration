@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <context:annotation-config/>
-
-    <import resource="sony_context.xml"/>
-    <import resource="toshiba_context.xml"/>
 
     <!--Create bean using constructor (for object types)-->
     <bean id="t1000const" class="com.spring.xml.conf.robots.ModelT1000const">
@@ -24,12 +19,23 @@
     </bean>
 
 
+
     <!--Create bean using constructor (for primitive types) -->
     <bean id="t1000" class="com.spring.xml.conf.robots.ModelT1000">
         <constructor-arg value="red" index="0" type="java.lang.String"/>
         <constructor-arg value="1988" index="1" type="int"/>
         <constructor-arg value="true" index="2" type="boolean"/>
     </bean>
+
+
+    <bean id="sonyHand" class="com.spring.xml.conf.service.impl.SonyHand"/>
+    <bean id="sonyHead" class="com.spring.xml.conf.service.impl.SonyHead"/>
+    <bean id="sonyLeg" class="com.spring.xml.conf.service.impl.SonyLeg"/>
+
+
+    <bean id="toshibaHand" class="com.spring.xml.conf.service.impl.ToshibaHand"/>
+    <bean id="toshibaHead" class="com.spring.xml.conf.service.impl.ToshibaHead"/>
+    <bean id="toshibaLeg" class="com.spring.xml.conf.service.impl.ToshibaLeg"/>
 
 
 </beans>
